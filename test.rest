@@ -1,0 +1,21 @@
+GET http://localhost:3000/students
+###
+POST http://localhost:3000/students
+
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  
+  "dateOfBirth": "2000-01-01T00:00:00Z",
+  "address": {
+    "street": "123 Main St",
+    "city": "Springfield",
+    "state": "IL",
+    "zipCode": "62701"
+  },
+  "phone": "555-1234"
+}
+
+
+###
