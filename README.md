@@ -5,9 +5,7 @@
 
 # Overview
 
-The "HelloWorld" Console Application is a simple and foundational program developed using the .NET framework and C# programming language. It demonstrates the core structure of a console application, including the use of namespaces, classes, methods, and the application entry point. The application outputs a single line of text, "Hello, World!"
-
-
+The  SMS db  is a simple and foundational program developed using the  Mongo atlas and  node.js(express) to  develop a crude operation that will allow to add students , update their information and delete them
 
 [Software Demo Video](http://youtube.link.goes.here)
 
