@@ -2,6 +2,8 @@ const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const studentRoutes = require('./routes/student.routes');
+const studentGrades = require('./routes/grades');
+const studentGradesAll = require('./routes/gradesStudents');
 
 // Load environment variables from .env file
 dotenv.config();
@@ -34,6 +36,8 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Use routes for students
 app.use('/students', studentRoutes);
+app.use('/class', studentGrades)
+app.use('/all', studentGradesAll)
 
 // Simple route to check if the API is running
 app.get('/', (req, res) => {

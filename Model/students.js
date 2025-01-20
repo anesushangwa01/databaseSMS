@@ -1,10 +1,14 @@
 const mongoose = require('mongoose');
 
 const studentSchema = new mongoose.Schema({
-  firstName: { type: String,  },
-  lastName: { type: String,  },
-
-  dateOfBirth: { type: Date,  },
+  firstName: { type: String },
+  lastName: { type: String },
+  email: { 
+    type: String, 
+    unique: true, 
+  
+  },
+  dateOfBirth: { type: Date },
   address: {
     street: String,
     city: String,
@@ -12,8 +16,10 @@ const studentSchema = new mongoose.Schema({
     zipCode: String,
   },
   phone: String,
+  grades: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Grade' }], // Reference to Grade
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model('Student', studentSchema);
+const Student = mongoose.model('Student', studentSchema);
+module.exports = Student;
